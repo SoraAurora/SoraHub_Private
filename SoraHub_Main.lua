@@ -1,7 +1,7 @@
 local key = loadstring(game:HttpGet("https://pastebin.com/raw/Ab3e8maX"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Webhook_Login.lua"))()
 
 function begin()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Webhook_Login.lua"))()
 	rconsoleclear()
 	rconsolename("Sora Hub Key System")
 	rconsoleprint("@@LIGHT_CYAN@@")
