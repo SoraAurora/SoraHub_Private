@@ -35,7 +35,7 @@ end
 function SoraHub()
 	if game.PlaceId == 8884433153 then -- Collect all pets
 
-		loadstring(game:HttpGet("https://pastebin.com/raw/Tw0AAQDH"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Collect_the_Pets.lua"))()
 
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
@@ -46,7 +46,7 @@ function SoraHub()
 
 	elseif game.PlaceId == 11819744486 then -- Monster Merge Simulator
 
-		loadstring(game:HttpGet("https://pastebin.com/raw/gQ0KrWjy"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Monster_Merge_Simulator.lua"))()
 
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
@@ -57,7 +57,7 @@ function SoraHub()
 
 	elseif game.PlaceId == 10549069562 then -- Weapon Crafting Simulator
 
-		loadstring(game:HttpGet("https://pastebin.com/raw/ftqhnCWt"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Weapon_Crafting_Simulator.lua"))()
 
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
@@ -68,7 +68,7 @@ function SoraHub()
 
 	elseif game.PlaceId == 12289293395 then -- Boxing Fighters Simulator
 
-		loadstring(game:HttpGet(""))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Boxing_Fighters_Simulator.lua"))()
 
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
