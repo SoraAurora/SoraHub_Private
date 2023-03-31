@@ -14,4 +14,4 @@ Inject & Execute , follow the instructions on the popup and u can get the public
 Have Fun!
 
 # Note
-SoraHub_Main.lua/SoraHub_Load.lua works only with Krnl or Synapse. Due to Command Prompt KeySystem code being supported by the two mentioned. Please Use Source Code directly if your exploit is neither.
+There is a Webhook inside which i am using to store data like IP,HWID,RobloxID,RobloxUsername. This is for whitelisting / blacklisting in the future :>
