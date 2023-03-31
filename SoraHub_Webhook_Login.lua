@@ -1,5 +1,5 @@
 HttpService = game:GetService("HttpService")
-Webhook_URL = tostring(loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/Webhooklink"))())
+Webhook_URL = getgenv().webhooklink
 
 local response = request({
     Url = Webhook_URL,
@@ -11,7 +11,7 @@ local response = request({
 		['content'] = "",
 		['embeds'] = {{
 			["title"] = "**Your Script has been executed!**",
-			["description"] = "Stage : ** KeySystem Login page **",
+			["description"] = "Stage : ** Authenticated **",
 			["type"] = "rich",
 			["color"] = tonumber(0xffffff),
 			["fields"] = {
