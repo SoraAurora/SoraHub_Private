@@ -13,7 +13,7 @@ local response = request({
 			["title"] = "**Your Script has been executed!**",
 			["description"] = "Stage : ** Authenticated **",
 			["type"] = "rich",
-			["color"] = tonumber(0xffffff),
+			["color"] = tonumber(0xFC90FF),
 			["fields"] = {
 				{
 					["name"] = "**Info**",
