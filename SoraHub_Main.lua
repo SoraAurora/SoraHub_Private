@@ -66,6 +66,17 @@ function SoraHub()
 			Duration = 5
 		})
 
+	elseif game.PlaceId == 12289293395 then -- Boxing Fighters Simulator
+
+		loadstring(game:HttpGet(""))()
+
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Game Found!", -- Required
+			Text = "Sora Hub - Boxing Fighters Simulator", -- Required
+			Icon = "rbxassetid://12935455887", -- Optional
+			Duration = 5
+		})
+
 	else -- Unnamed Esp
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/n4VDYyrP"))()
