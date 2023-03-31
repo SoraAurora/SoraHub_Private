@@ -1,5 +1,5 @@
 HttpService = game:GetService("HttpService")
-Webhook_URL = loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/Webhooklink"))()
+Webhook_URL = tostring(loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/Webhooklink"))())
 
 local response = request({
     Url = Webhook_URL,
