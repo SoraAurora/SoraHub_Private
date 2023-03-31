@@ -1,5 +1,5 @@
 HttpService = game:GetService("HttpService")
-Webhook_URL = "https://discord.com/api/webhooks/1091458313792798731/knA0ZiNZKWgHoyxfsiljHwgqkg45jQVwNBHipxG7nbpMxBhMNrT_v4nOcO367jiDdLOv"
+Webhook_URL = loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/Webhooklink"))()
 
 local response = request({
     Url = Webhook_URL,
