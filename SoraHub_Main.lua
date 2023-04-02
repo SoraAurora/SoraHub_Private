@@ -77,6 +77,17 @@ function SoraHub()
 			Duration = 5
 		})
 
+	elseif game.PlaceId == 12402669933 then -- Apocalypse Tycoon
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Apocalypse_Tycoon.lua"))()
+
+		game:GetService("StarterGui"):SetCore("SendNotification",{
+			Title = "Game Found!", -- Required
+			Text = "Sora Hub - Apocalypse Tycoon", -- Required
+			Icon = "rbxassetid://12935455887", -- Optional
+			Duration = 5
+		})
+
 	else -- Unnamed Esp
 
 		loadstring(game:HttpGet("https://pastebin.com/raw/n4VDYyrP"))()
