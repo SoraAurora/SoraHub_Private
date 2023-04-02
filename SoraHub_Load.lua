@@ -9,13 +9,14 @@
 |  $$$$$$/|  $$$$$$/| $$     |  $$$$$$$      | $$  | $$|  $$$$$$/| $$$$$$$/
  \______/  \______/ |__/      \_______/      |__/  |__/ \______/ |_______/ 
                                                                            
-SoraHub - 31/3/2023
+SoraHub - 3/4/2023
 
-Supported Games [4] : 
+Supported Games [5] : 
  - Collect All Pets
  - Monster Merge Simulator
  - Weapon Crafting Simulator
  - Boxing Fighters Simulator
+ - Apocalypse Tycoon
 
 Created by Sora
 ]]
