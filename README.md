@@ -7,8 +7,8 @@ This is just my little own personal project , I simply create custom scripts use
 # Step 1
 Download/Copy SoraHub_Load.lua
 # Step 2
-Paste or Open SoraHub_Load.lua in your exploit. Supported Exploits are Krnl and Synapse
-# Step 3
+Paste or Open SoraHub_Load.lua in your exploit. Supported Exploits are ONLY Krnl cuz alot of exploiters dun have muny for paid software thus freebies :D
+
 Inject & Execute , follow the instructions on the popup and u can get the public key
 # Step 4
 Have Fun!
