@@ -18,6 +18,12 @@ Supported Games [5] :
  - Boxing Fighters Simulator
  - Apocalypse Tycoon
 
+Supported Exploits [1] :
+ - KERNEL / KRNL (KRNL.CA <-- Website)
+
 Created by Sora
+
+Notes : 
+Adding Synapse Support Soon 
 ]]
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SoraAurora/SoraHub/main/SoraHub_Main.lua"))()
