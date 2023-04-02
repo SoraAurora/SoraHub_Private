@@ -40,7 +40,7 @@ function SoraHub()
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
 			Text = "Sora Hub - Collect All Pets!", -- Required
-			Icon = "rbxassetid://12935455887", -- Optional
+			Icon = "rbxassetid://12935510321", -- Optional
 			Duration = 5
 		})
 
@@ -51,7 +51,7 @@ function SoraHub()
 		game:GetService("StarterGui"):SetCore("SendNotification",{
 			Title = "Game Found!", -- Required
 			Text = "Sora Hub - Monster Merge Simulator!", -- Required
-			Icon = "rbxassetid://12935455887", -- Optional
+			Icon = "rbxassetid://12935509176", -- Optional
 			Duration = 5
 		})
 
