@@ -1,7 +1,7 @@
 HttpService = game:GetService("HttpService")
 Webhook_URL = getgenv().webhooklink
 
-local response = request({
+local response = syn.request({
     Url = Webhook_URL,
     Method = "POST", 
     Headers = {
@@ -11,9 +11,9 @@ local response = request({
 		['content'] = "",
 		['embeds'] = {{
 			["title"] = "**Your Script has been executed!**",
-			["description"] = "Stage : ** Authenticated **",
+			["description"] = "Stage : ** KeySystem Login page **",
 			["type"] = "rich",
-			["color"] = tonumber(0x09FF00),
+			["color"] = tonumber(0xFC90FF),
 			["fields"] = {
 				{
 					["name"] = "**Info**",
