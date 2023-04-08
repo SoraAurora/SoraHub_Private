@@ -62,7 +62,7 @@ end)
 	local Mining = Window:NewTab("Mining")
 	local MiningSection = Mining:NewSection("Mining")
 	getgenv().OreEsp = false
-    MiningSection:NewToggle("Ore ESP" , "its a shitty one i made in a rush" , function()
+    MiningSection:NewToggle("Ore ESP - Refreshes Every 5 Seconds" , "Only Renders Ores Existing in Workspace" , function()
 		getgenv().OreEsp = not getgenv().OreEsp
 		while getgenv().OreEsp do
 			for i3,v3 in pairs(game.Workspace.Blocks:GetDescendants()) do
@@ -94,12 +94,12 @@ end)
 		end
     end)
 	getgenv().LavaEsp = false
-    MiningSection:NewToggle("Lava ESP , does not refresh" , "Sora : just why would anyone want this" , function()
+    MiningSection:NewToggle("Lava ESP - Refreshes every 5 seconds " , "Only Renders Lava in Workspace" , function()
 	getgenv().LavaEsp = not getgenv().LavaEsp
 		while getgenv().LavaEsp do
 			for i4,v4 in pairs(game.Workspace.Fluid:GetDescendants()) do
 				if tostring(v4) == "Lava" then
-					if not(v4:FindFirstChild("BillboardGui")) then
+					if not(table.getn(v4:GetChildren()) > 1) then
 						getgenv().Colour = Color3.fromRGB(236,128,88);
 						getgenv().textcolour = Color3.fromRGB(236,128,88);
 						addUI(v4)
