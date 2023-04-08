@@ -54,7 +54,6 @@ function begin_syn()
 		rconsoleinfo("Correct Key!")
 		rconsoleinfo("Loading...")
 		wait(2)
-		rconsoleclose()
 		SoraHub()
 	else
 		rconsoleclear()
