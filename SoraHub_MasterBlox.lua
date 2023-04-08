@@ -43,7 +43,7 @@ end)
 	local PvPSection = PvP:NewSection("Combat")
 
 	getgenv().killaura = false
-	PvPSection:NewToggle("KillAura - Range is Small","", function()
+	PvPSection:NewToggle("KillAura - Range is Small & Reactive Frequently","combine with walkspeed 30 and run around the enemy", function()
 		getgenv().killaura = not getgenv().killaura
 		while getgenv().killaura do
 			for i1 , v1 in pairs(Players:GetPlayers()) do
@@ -55,6 +55,24 @@ end)
 			wait(0.01)
 		end
 	end)
+
+	getgenv().ChestEsp = false
+    PvPSection:NewToggle("Chest ESP - Refreshes every 5 seconds " , "Only Renders Chest in Workspace" , function()
+	getgenv().ChestEsp = not getgenv().ChestEsp
+		while getgenv().ChestEsp do
+			for i5,v5 in pairs(game.Workspace.Blocks:GetDescendants()) do
+				if tostring(v5) == "Chest" then
+					if not(table.getn(v5:GetChildren()) > 1) then
+						getgenv().Colour = Color3.fromRGB(75,139,59);
+						getgenv().textcolour = Color3.fromRGB(75,139,59);
+						addUI(v5)
+					end
+				end
+			end
+			wait(5)
+		end
+	end)
+
     PvPSection:NewButton("Unnamed ESP by WeAreDevs" , "" , function()
         loadstring(game:HttpGet("https://pastebin.com/raw/n4VDYyrP"))()
     end)
