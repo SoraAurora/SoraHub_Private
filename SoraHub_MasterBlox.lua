@@ -5,37 +5,113 @@ local Players = game:GetService("Players")
 local LocalPlayer = game.Players.LocalPlayer.Character
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
+function addUI(part)
+	local partGui = Instance.new("BillboardGui", part)
+	partGui.Size = UDim2.new(1,0,1,0);
+	partGui.AlwaysOnTop = true;
+	local frame = Instance.new("Frame", partGui)
+	frame.BackgroundColor3 = getgenv().Colour;
+	frame.BackgroundTransparency = 0.5
+	frame.Size = UDim2.new(1,0,1,0)
+	frame.BorderSizePixel = 0;
+	local nameGui = Instance.new("BillboardGui" , part)
+	nameGui.Size = UDim2.new(3,0,1.5,0);
+	nameGui.SizeOffset = Vector2.new(0,0.5)
+	nameGui.AlwaysOnTop = true;
+	local text = Instance.new("TextLabel" , nameGui)
+	text.Text = tostring(part)
+	text.TextColor3 = getgenv().textcolour;
+	text.TextTransparency = 0
+	text.BackgroundTransparency = 1
+	text.TextScaled = true
+	text.Size = UDim2.new(2,2,2,2);
+	text.Font = Enum.Font.GothamSemibold
+	text.Name = "Text"
+end
+
 game:GetService("RunService").RenderStepped:Connect(function()
 	local anticheatname = "scripts loader"
-	for i1 , v2 in pairs(LocalPlayer:GetChildren()) do
+	for i2 , v2 in pairs(LocalPlayer:GetChildren()) do
 		if tostring(v2) == anticheatname then
 			v2:Destroy()
 		end
 	end
 end)
 
--- Main
-	local Main = Window:NewTab("Main")
-	local MainSection = Main:NewSection("Main")
+-- PVP
+	local PvP = Window:NewTab("Combat")
+	local PvPSection = PvP:NewSection("Combat")
 
 	getgenv().killaura = false
-	MainSection:NewToggle("KillAura - Range is Small","", function()
+	PvPSection:NewToggle("KillAura - Range is Small","", function()
 		getgenv().killaura = not getgenv().killaura
 		while getgenv().killaura do
 			for i1 , v1 in pairs(Players:GetPlayers()) do
 				local target = game.Workspace:FindFirstChild(tostring(v1))
-				if tostring(target) ~= tostring(LocalPlayer) and game.Players.LocalPlayer:DistanceFromCharacter(target.PrimaryPart.Position) < 16  then
-					print(LocalPlayer , target , "hit?")
+				if tostring(target) ~= tostring(LocalPlayer) and game.Players.LocalPlayer:DistanceFromCharacter(target.PrimaryPart.Position) < 15  then
 					game.ReplicatedStorage.GameRemotes.Attack:InvokeServer(target ,"G#M;IVT;#})jAkm*2De!")
-					print("defo hit")
 				end
 			end
 			wait(0.01)
 		end
 	end)
-
-    MainSection:NewButton("Unnamed ESP by WeAreDevs" , "" , function()
+    PvPSection:NewButton("Unnamed ESP by WeAreDevs" , "" , function()
         loadstring(game:HttpGet("https://pastebin.com/raw/n4VDYyrP"))()
+    end)
+-- mining 
+	local Mining = Window:NewTab("Mining")
+	local MiningSection = Mining:NewSection("Mining")
+	getgenv().OreEsp = false
+    MiningSection:NewToggle("Ore ESP" , "its a shitty one i made in a rush" , function()
+		getgenv().OreEsp = not getgenv().OreEsp
+		while getgenv().OreEsp do
+			for i3,v3 in pairs(game.Workspace.Blocks:GetDescendants()) do
+				if not(table.getn(v3:GetChildren()) > 0) then
+					if tostring(v3) == "DiamondOre" then
+						getgenv().Colour = Color3.fromRGB(185,242,255);
+						getgenv().textcolour = Color3.fromRGB(185,242,255);
+						addUI(v3)
+					elseif tostring(v3) == "IronOre" then
+						getgenv().Colour = Color3.fromRGB(224,156,85);
+						getgenv().textcolour = Color3.fromRGB(224,156,85);
+						addUI(v3)
+					elseif tostring(v3) == "CoalOre" then
+						getgenv().Colour = Color3.fromRGB(78,79,85);
+						getgenv().textcolour = Color3.fromRGB(78,79,85);
+						addUI(v3)
+					elseif tostring(v3) == "GoldOre" then
+						getgenv().Colour = Color3.fromRGB(212,175,55);
+						getgenv().textcolour = Color3.fromRGB(212,175,55);
+						addUI(v3)
+					elseif tostring(v3) == "OverlordOre" then
+						getgenv().Colour = Color3.fromRGB(106,13,173);
+						getgenv().textcolour = Color3.fromRGB(106,13,173);
+						addUI(v3)
+					end
+				end
+			end
+			wait(5)
+		end
+    end)
+	getgenv().LavaEsp = false
+    MiningSection:NewToggle("Lava ESP , does not refresh" , "Sora : just why would anyone want this" , function()
+	getgenv().LavaEsp = not getgenv().LavaEsp
+		while getgenv().LavaEsp do
+			for i4,v4 in pairs(game.Workspace.Fluid:GetDescendants()) do
+				if tostring(v4) == "Lava" then
+					if not(v4:FindFirstChild("BillboardGui")) then
+						getgenv().Colour = Color3.fromRGB(236,128,88);
+						getgenv().textcolour = Color3.fromRGB(236,128,88);
+						addUI(v4)
+					end
+				end
+			end
+			wait(5)
+		end
+	end)
+
+    MiningSection:NewButton("FullBright / Night Vision?" , "" , function()
+    	loadstring(game:HttpGet("https://pastebin.com/raw/EGrKSD1A", true))()
     end)
 --player
 	local Player = Window:NewTab("Player")
