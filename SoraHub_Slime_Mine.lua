@@ -114,6 +114,24 @@ local PlayerHead = game.Players.LocalPlayer.Character.Head
         end
     end)
 
+    getgenv().autoegg9 = false
+    EggSection:NewToggle("Auto Open Forest Portal - 125,000 Coins" ,"" ,function()
+        getgenv().autoegg9 = not getgenv().autoegg9
+        while getgenv().autoegg9 do
+            game:GetService("ReplicatedStorage").Modules._Index["sleitnick_knit@1.4.7"].knit.Services.PlayerService.RF.requestAction:InvokeServer("hatch","Egg9",1)
+            wait(2.5)
+        end
+    end)
+
+    getgenv().autoegg10 = false
+    EggSection:NewToggle("Auto Open Mystical Portal - 175,000 Coins" ,"" ,function()
+        getgenv().autoegg10 = not getgenv().autoegg10
+        while getgenv().autoegg10 do
+            game:GetService("ReplicatedStorage").Modules._Index["sleitnick_knit@1.4.7"].knit.Services.PlayerService.RF.requestAction:InvokeServer("hatch","Egg10",1)
+            wait(2.5)
+        end
+    end)
+
 -- Tps
     local Teleport = Window:NewTab("Teleports")
     local TeleportSection = Teleport:NewSection("Teleports")
