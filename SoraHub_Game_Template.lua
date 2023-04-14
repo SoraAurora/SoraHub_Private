@@ -8,7 +8,7 @@ local LocalPlayer = game.Players.LocalPlayer.Character
 	local MainSection = Main:NewSection("Main")
 
 	MainSection:NewButton("Button","", function()
-		--code
+		--code / function / remote
 	end)
 
 

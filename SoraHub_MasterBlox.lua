@@ -167,7 +167,7 @@ end)
     end)
  
     MiscSection:NewButton("Simple Spy" , "" , function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/9vCepJBL"))() -- Remote Spy by veeb
+        loadstring(game:HttpGet("https://pastebin.com/raw/9vCepJBL"))() -- Simply Spy
     end)
 
 	MiscSection:NewKeybind("Right Shift to Hide/Open GUI", "", Enum.KeyCode.RightShift, function()

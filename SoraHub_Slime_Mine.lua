@@ -12,7 +12,7 @@ local PlayerHead = game.Players.LocalPlayer.Character.Head
         getgenv().autopickup = not getgenv().autopickup
         while getgenv().autopickup do
             for i1 , v1 in pairs(game.Workspace.PickupParts:GetChildren()) do
-                if string.match(v1.Name, "sora_aurora") then
+                if string.match(v1.Name, tostring(LocalPlayer)) then
                     local separatedText = string.split(tostring(v1), "#")
                     game:GetService("ReplicatedStorage").Modules._Index["sleitnick_knit@1.4.7"].knit.Services.BlocksService.RF.tryPickUpBlock:InvokeServer(tostring(separatedText[4]))
                 end
